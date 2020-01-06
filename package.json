@@ -4,7 +4,7 @@
   "description": "",
   "main": "st2tst_js.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,9 @@
   "homepage": "https://github.com/BenjTr/Testing-App#readme",
   "dependencies": {
     "chai": "^4.2.0",
-    "jsdom": "^15.2.1",
+    "jsdom": "^15.2.1"
+  },
+  "devDependencies": {
     "mocha": "^7.0.0"
   }
 }
