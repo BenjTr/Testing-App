@@ -1,0 +1,24 @@
+{
+  "name": "testing-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "st2tst_js.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenjTr/Testing-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenjTr/Testing-App/issues"
+  },
+  "homepage": "https://github.com/BenjTr/Testing-App#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "jsdom": "^15.2.1",
+    "mocha": "^7.0.0"
+  }
+}

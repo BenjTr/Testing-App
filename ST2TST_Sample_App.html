@@ -1,81 +1,86 @@
 <!DOCTYPE HTML>
 <html lang="FR">
-	<head>
-		<meta charset="utf-8">
-		<title> ST2TST - M2SE </title>
-	</head>
-		<body onload = "onLoadFunction()">
-		<form id = "myForm">
-			<label>Nom : </label>
-			<input id = "nom" type = "text" />
-			</br></br>
-			<label>Date de naissance : </label>
-			<select id = "jDn">
-			</select>
-			<select id = "mDn">
-			</select>
-			<select id = "aDn">
-			</select>
-			<input id = "verifier" type = "button" value = "vérifier" onclick = "checkBirth()" />
-			</br></br>
-			<p id = "errorDateNaissance" class = "element_evenementiel" style = "color : red; display : none;" >Vous êtes donc né(e) dans le futur?</p>
-			<p id = "dateNaissanceMineur" class = "element_evenementiel" style = "color : red; display : none;" >Vous êtes donc mineur(e)?</p>
-			<label><b>Téléphone(s)</b></label></br></br>
-			<label>Domicile : </label>
-			<input id = "telephoneDomicile" type = "tel" onblur = "checkNumTelephone(this)"/>
-			</br></br>
-			<p id = "errorNumDomicile" class = "element_evenementiel" style = "color : red; display : none;" >Numéro incorrect. Fomart accepté : xxxxxxxxxx</p>
-			<label>Portable : </label>
-			<input id = "telephonePortable" type = "tel" onblur = "checkNumTelephone(this)" value = "06"/>
-			</br></br>
-			<p id = "errorNumPortable" class = "element_evenementiel" style = "color : red; display : none;" >Numéro incorrect. Fomart accepté : xxxxxxxxxx</p>
-			<label><b>Adresse : </b></label>
-			</br></br>
-			<label>Rue : </label>
-			<input id = "rue" type = "text"/>
-			</br></br>
-			<label>Code Postal :</label>
-			<input id = "codePostal" type = "text" onblur = "checkCodePostal()"/>
-			<label>Ville :</label>
-			<input id = "ville" type = "text" onblur = "checkCityDijon()"/>
-			</br></br>
-			<p id = "errorCodePostal" class = "element_evenementiel" style = "color : red; display : none;" >Code postal incorrect</p>
-			<label>E-mail : </label>
-			<input id = "email" type = "text" placeholder = "@" onblur = "checkEmail()"/>
-			<p id = "errorEmail" class = "element_evenementiel" style = "color : red; display : none;" >Veuillez renseigner une adresse en .com ou .fr</p>
-			</br></br>
-			<label><b>Profession / Activité :</b></label>
-			</br></br>
-			<input type = "radio" name = "profession" value = "Cadre" onclick="cadreChecked()"/> Cadre
-			<input type = "radio" name = "profession" value = "Etudiant" onclick="etudiantChecked()"/>Etudiant
-			</br></br>
-			<input type = "radio" name = "profession" value = "Fonctionnaire" onclick="fonctionnaireChecked()"/>Fonctionnaire
-			<input type = "radio" name = "profession" value = "Patron" onclick="patronChecked()"/>Patron
-			<select id = "listePatron" class = "element_evenementiel" style = "display : none;">
-				<option>
-					1..10
-				</option>
-				<option>
-					11..20
-				</option>
-				<option>
-					21..30
-				</option>
-			</select>
-			</br></br>
-			<div id="div_qualification_etudiant" class = "element_evenementiel" style="display : none;">
-				<input type = "checkbox" name = "qualification_etudiant" value = "Intelligent"/>Intelligent
-				</br>
-				<input type = "checkbox" name = "qualification_etudiant" value = "Motivé"/>Motivé
-				</br>
-				<input type = "checkbox" name = "qualification_etudiant" value = "Inquiet"/>Inquiet
-				</br>
-				<input type = "checkbox" name = "qualification_etudiant" value = "Confiant"/>Confiant
-			</div>
-			</br>
-			<input type = button value = "Reset" onclick = "resetForm()"/>
-			<input type = button value = "Visualisez" onclick = "validateForm()"/>
-		</form>
-		<script type="text/javascript" src="st2tst_js.js"></script>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title> ST2TST - M2SE </title>
+</head>
+<body onload="onLoadFunction()">
+<form id="myForm">
+    <label>Nom : </label>
+    <input id="nom" type="text"/>
+    </br></br>
+    <label>Date de naissance : </label>
+    <select id="jDn">
+    </select>
+    <select id="mDn">
+    </select>
+    <select id="aDn">
+    </select>
+    <input id="verifier" type="button" value="vérifier" onclick="checkBirth()"/>
+    </br></br>
+    <p id="errorDateNaissance" class="element_evenementiel" style="color : red; display : none;">Vous êtes donc né(e)
+        dans le futur?</p>
+    <p id="dateNaissanceMineur" class="element_evenementiel" style="color : red; display : none;">Vous êtes donc
+        mineur(e)?</p>
+    <label><b>Téléphone(s)</b></label></br></br>
+    <label>Domicile : </label>
+    <input id="telephoneDomicile" type="tel" onblur="checkNumTelephone(this)"/>
+    </br></br>
+    <p id="errorNumDomicile" class="element_evenementiel" style="color : red; display : none;">Numéro incorrect. Fomart
+        accepté : xxxxxxxxxx</p>
+    <label>Portable : </label>
+    <input id="telephonePortable" type="tel" onblur="checkNumTelephone(this)" value="06"/>
+    </br></br>
+    <p id="errorNumPortable" class="element_evenementiel" style="color : red; display : none;">Numéro incorrect. Fomart
+        accepté : xxxxxxxxxx</p>
+    <label><b>Adresse : </b></label>
+    </br></br>
+    <label>Rue : </label>
+    <input id="rue" type="text"/>
+    </br></br>
+    <label>Code Postal :</label>
+    <input id="codePostal" type="text" onblur="checkCodePostal()"/>
+    <label>Ville :</label>
+    <input id="ville" type="text" onblur="checkCityDijon()"/>
+    </br></br>
+    <p id="errorCodePostal" class="element_evenementiel" style="color : red; display : none;">Code postal incorrect</p>
+    <label>E-mail : </label>
+    <input id="email" type="text" placeholder="@" onblur="checkEmail()"/>
+    <p id="errorEmail" class="element_evenementiel" style="color : red; display : none;">Veuillez renseigner une adresse
+        en .com ou .fr</p>
+    </br></br>
+    <label><b>Profession / Activité :</b></label>
+    </br></br>
+    <input type="radio" name="profession" value="Cadre" onclick="cadreChecked()"/> Cadre
+    <input type="radio" name="profession" value="Etudiant" onclick="etudiantChecked()"/>Etudiant
+    </br></br>
+    <input type="radio" name="profession" value="Fonctionnaire" onclick="fonctionnaireChecked()"/>Fonctionnaire
+    <input type="radio" name="profession" value="Patron" onclick="patronChecked()"/>Patron
+    <select id="listePatron" class="element_evenementiel" style="display : none;">
+        <option>
+            1..10
+        </option>
+        <option>
+            11..20
+        </option>
+        <option>
+            21..30
+        </option>
+    </select>
+    </br></br>
+    <div id="div_qualification_etudiant" class="element_evenementiel" style="display : none;">
+        <input type="checkbox" name="qualification_etudiant" value="Intelligent"/>Intelligent
+        </br>
+        <input type="checkbox" name="qualification_etudiant" value="Motivé"/>Motivé
+        </br>
+        <input type="checkbox" name="qualification_etudiant" value="Inquiet"/>Inquiet
+        </br>
+        <input type="checkbox" name="qualification_etudiant" value="Confiant"/>Confiant
+    </div>
+    </br>
+    <input type=button value="Reset" onclick="resetForm()"/>
+    <input type=button value="Visualisez" onclick="validateForm()"/>
+</form>
+<script type="text/javascript" src="st2tst_js.js"></script>
+</body>
 </html>
