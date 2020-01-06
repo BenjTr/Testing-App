@@ -407,17 +407,16 @@ describe('validateForm()', function () {
     })
     it('Filling correctly the form should render a page with all the details', function () {
         app.onLoadFunction()
-        var nom = document.getElementById('nom').value = 'Nicolas'
-        var jourNaissance = document.getElementById('jDn').value = '01'
-        var moisNaissance = document.getElementById('mDn').value = '02'
-        var anneeNaissance = document.getElementById('aDn').value = '1997'
-        var dateNaissance = jourNaissance + '/' + moisNaissance + '/' + anneeNaissance
-        var portable = document.getElementById('telephonePortable').value = '0621675015'
-        var domicile = document.getElementById('telephoneDomicile').value = '0164663888'
-        var rue = document.getElementById('rue').value = '8 rue urgons'
-        var ville = document.getElementById('ville').value = 'Roissy-en-Brie'
-        var codePostal = document.getElementById('codePostal').value = '77136'
-        var email = document.getElementById('email').value = 'aGoodMail@hotmail.fr'
+        document.getElementById('nom').value = 'Nicolas'
+        document.getElementById('jDn').value = '01'
+        document.getElementById('mDn').value = '02'
+        document.getElementById('aDn').value = '1997'
+        document.getElementById('telephonePortable').value = '0621675015'
+        document.getElementById('telephoneDomicile').value = '0164663888'
+        document.getElementById('rue').value = '8 rue urgons'
+        document.getElementById('ville').value = 'Roissy-en-Brie'
+        document.getElementById('codePostal').value = '77136'
+        document.getElementById('email').value = 'aGoodMail@hotmail.fr'
         document.getElementsByName('profession').forEach(radioButton => {
             if (radioButton.value == 'Patron') {
                 radioButton.checked = true
@@ -449,17 +448,16 @@ describe('validateForm nominal case', function () {
     })
     it('Filling correctly the form should render a page with all the details', function () {
         app.onLoadFunction()
-        var nom = document.getElementById('nom').value = 'Nicolas'
-        var jourNaissance = document.getElementById('jDn').value = '01'
-        var moisNaissance = document.getElementById('mDn').value = '02'
-        var anneeNaissance = document.getElementById('aDn').value = '1997'
-        var dateNaissance = jourNaissance + '/' + moisNaissance + '/' + anneeNaissance
-        var portable = document.getElementById('telephonePortable').value = '0621675015'
-        var domicile = document.getElementById('telephoneDomicile').value = '0164663888'
-        var rue = document.getElementById('rue').value = '8 rue urgons'
-        var ville = document.getElementById('ville').value = 'Roissy-en-Brie'
-        var codePostal = document.getElementById('codePostal').value = '77136'
-        var email = document.getElementById('email').value = 'aGoodMail@hotmail.fr'
+        document.getElementById('nom').value = 'Nicolas'
+        document.getElementById('jDn').value = '01'
+        document.getElementById('mDn').value = '02'
+        document.getElementById('aDn').value = '1997'
+        document.getElementById('telephonePortable').value = '0621675015'
+        document.getElementById('telephoneDomicile').value = '0164663888'
+        document.getElementById('rue').value = '8 rue urgons'
+        document.getElementById('ville').value = 'Roissy-en-Brie'
+        document.getElementById('codePostal').value = '77136'
+        document.getElementById('email').value = 'aGoodMail@hotmail.fr'
         document.getElementsByName('profession').forEach(radioButton => {
             if (radioButton.value == 'Patron') {
                 radioButton.checked = true
@@ -467,7 +465,6 @@ describe('validateForm nominal case', function () {
         })
         document.getElementsByName('listePatron').value = '1..10'
         app.validateForm()
-        console.log(document.documentElement.innerHTML)
         let expectedResult = "<head></head><body><h1>Résumé de vos informations</h1><p>M/Mme Nicolas est né(e) le 01/02/1997. M/Mme Nicolas est patron(ne) et la valeur de la liste est : 1..10. </p>Ses coordonées sont les suivantes : <ul><li><p>Téléphone portable : 0621675015</p></li><li><p>Téléphone fixe : 0164663888</p></li><li><p>Adresse : 8 rue urgons Roissy-en-Brie 77136</p></li><li><p>Adresse email : aGoodMail@hotmail.fr</p></li></ul></body>"
         expect(document.documentElement.innerHTML).to.equal(expectedResult)
     })
