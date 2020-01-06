@@ -266,6 +266,7 @@ function validateForm() {
                 }
                 // Quand on a finit avec l'étudiant, on met un point
                 stringResume += ' . '
+
             } else if (radioButton[i].value = 'Patron') {
                 // Si c'est le patron qui est coché on ajoute une phrase spéciale et
                 // la valeur qui est sélectionnée dans la liste liée au parton
